@@ -1,0 +1,201 @@
+﻿AJUSTES DE sf3_nativo.ini  (versión 201)
+==========================================
+
+El archivo sf3_nativo.ini está junto a sf3_nativo.exe. Se lee al arrancar el
+juego: después de cambiar algo, cierra el juego y vuelve a abrirlo.
+Formato: una línea por ajuste, nombre=valor. "1" = activado, "0" = apagado.
+Casi todo se puede cambiar también desde los menús del juego (OPCIONES en el
+título o F12 durante la partida); este archivo es lo que esos menús guardan.
+Si borras una línea, el juego usa su valor por defecto (entre corchetes).
+
+
+1. DISCO E IDIOMA
+-----------------
+disco             Ruta del .cue del disco USA (SCUS_946.40). Si falta, el juego
+                  lo busca en SYPHON3 y sus subcarpetas.
+idioma            es = textos, voces y audio de los vídeos en castellano;
+                  en = todo original en inglés.  [es]
+lanzador          1 = muestra la ventana del lanzador al abrir el juego.  [0]
+
+
+2. IMAGEN
+---------
+resolucion_ancho / resolucion_alto
+                  Resolución interna de dibujo (la nitidez del mundo 3D).
+ventana_ancho / ventana_alto
+                  Tamaño de la ventana cuando no está en pantalla completa.
+pantalla_completa 1 = pantalla completa (también Alt+Enter).  [0]
+solo_4_3          1 = imagen 4:3 como la PS1; 0 = pantalla ancha (se ve más a
+                  los lados, sin estirar).  [0]
+vsync             1 = sincroniza con el monitor (sin cortes en la imagen).  [1]
+fps_max           Límite de imágenes por segundo; 0 = sin límite.  [0]
+msaa              Suavizado de bordes MSAA: 0, 2, 4 u 8 (más = más suave y
+                  más gasto de la tarjeta).  [4]
+smaa              1 = suavizado extra SMAA sobre la escena.  [0]
+filtrado          1 = texturas filtradas (suaves); 0 = píxeles como la PS1.  [1]
+trilineal         1 = filtrado trilineal (texturas lejanas sin parpadeo).  [1]
+anisotropico      1 = filtrado anisotrópico (suelos lejanos más nítidos).  [1]
+sombras           1 = sombras de los personajes hechas por el PC.  [1]
+videos_ampliados  1 = los vídeos llenan la ventana; 0 = a su tamaño original.  [1]
+nieve             0 = sin nieve, 1 = la del juego, 2 a 6 = nieve propia en 3D
+                  (más número = más copos).  [3]
+humo_disparo      Humo que sale del cañón al disparar: 0 = nada, 1 = discreto,
+                  2 = más, 3 = mucho.  [1]
+lanzallamas_llamas  Lanzallamas: 0 = como el juego (un disparo por pulsación,
+                  sin fuego), 1 = como en SF2: llama piloto, disparo seguido
+                  mientras mantienes el botón, llamas que estallan al chocar
+                  y enemigos ardiendo, 2 = más fuego.  [1]
+vaho              1 = vaho de la respiración en las misiones frías (solo en
+                  esas: SNOWCAMP, RIDGE y la arena nevada).  [1]
+luz_mezcla        Mezcla la luz de las superficies vecinas (más alto = más
+                  suave). 0 = la luz exacta del juego, como en la PS1.  [0]
+                  (luz_suave y luz_juego de versiones anteriores ya no se usan)
+pies_hundidos     Si un personaje queda un poco hundido en el suelo, sus pies
+                  se dibujan por delante del suelo (sin moverlo) hasta esta
+                  cantidad; 0 = como el juego (pies cortados).  [12]
+
+
+3. HUD
+------
+hud_tamano        Tamaño del HUD en %.  [100]
+hud_bordes        1 = HUD pegado a los bordes de la pantalla ancha;
+                  0 = en el centro, como la PS1.  [1]
+hud_arma_huecos   1 = al cambiar de arma, si el juego deja vacío un momento el
+                  icono del arma, el port pone el que ya conoce de esa arma;
+                  0 = como el juego.  [1]
+botones_redondos  1 = en los avisos con mando Xbox/Nintendo se dibujan botones
+                  redondos de color.
+
+
+4. CONTROL Y CÁMARA
+-------------------
+movimiento        clasico = controles de la PS1 (izquierda/derecha giran);
+                  libre = moderno: la cámara se mueve con el ratón y Gabe va
+                  hacia donde pulsas, relativo a la cámara.  [clasico]
+camara            original = cámara del juego; firme = sin arrastre ni temblor
+                  al girar con el ratón (va con "libre").  [original]
+raton             1 = usar el ratón durante la partida.  [1]
+raton_sensibilidad
+                  Sensibilidad del ratón (más alto = gira más rápido).
+raton_invertir_y  1 = invierte arriba/abajo del ratón.  [0]
+vibracion         1 = vibración del mando.  [1]
+
+Rueda del ratón:
+rueda_armas       1 = la rueda cambia de arma.  [1]
+rueda_menu        1 = con el menú de armas abierto (Select mantenido), la rueda
+                  mueve la selección (abajo = siguiente).  [1]
+rueda_zoom        1 = apuntando con mira telescópica, la rueda acerca/aleja.  [1]
+rueda_acercar     Botón que manda la rueda hacia arriba al hacer zoom.  [triangulo]
+rueda_alejar      Botón que manda la rueda hacia abajo al hacer zoom.  [circulo]
+rueda_invertir    1 = invierte el sentido de la rueda.  [0]
+
+Teclas y botones (jugador 1):
+teclas_XXX        Teclas para cada botón de la PS1, separadas por "|".
+                  XXX = arriba, abajo, izquierda, derecha, cruz, circulo,
+                  cuadrado, triangulo, l1, r1, l2, r2, start, select,
+                  lateral_izq, lateral_der.
+                  Ejemplo: teclas_cruz=Space|K
+mando_XXX         Botón del mando de PC para ese mismo botón (a, b, x, y,
+                  leftshoulder, rightshoulder, lefttrigger, righttrigger,
+                  start, back, dpup, dpdown, dpleft, dpright).
+
+Jugador 2 (modo dos jugadores):
+jugador2          mando = el jugador 2 usa un mando; teclado = usa el teclado.
+j2_teclas_XXX / j2_mando_XXX
+                  Igual que las del jugador 1, para el jugador 2.
+
+
+5. SONIDO
+---------
+volumen_general   Volumen general, de 0 a 10.
+volumen_musica    Volumen de la música, de 0 a 10.
+volumen_voces     Volumen de las voces, de 0 a 10.
+sonido_mono       1 = sonido en mono.  [0]
+retraso_sonido_ms Retraso del sonido en milisegundos, por si el sonido va
+                  adelantado respecto a la imagen.  [100]
+
+
+6. RENDIMIENTO Y CARGAS
+-----------------------
+cd_rapido         Velocidad de lectura del disco emulado (x veces).  [4]
+turbo_cargas      1 = acelera las pantallas de carga.
+retraso_ms        Lo que la imagen va por detrás del juego para poder moverse
+                  suave entre cuadros (milisegundos). Mejor no tocarlo.  [60]
+
+
+7. MIRA DE RAYOS X DEL AU300
+----------------------------
+Al apuntar con el AU300 (L1 / clic derecho) aparece una caja que deja ver a
+través de las paredes. Estos ajustes controlan cómo se ve esa caja.
+
+-- Lo general --
+rayosx_vista      propia = el PC dibuja dentro de la caja el escenario real con
+                  la misma cámara que la vista normal (nítido, sin retraso al
+                  mover la mira, encaja perfecto con lo de fuera), quitando lo
+                  que está cerca del ojo, como hace el original. (v168)
+                  juego = los polígonos que dibuja el propio juego para la mira
+                  (modo de la v160-v167: más bajo de resolución y con algo de
+                  retraso al girar rápido).
+                  ps1 = la imagen original de la PS1, ampliada.  [propia]
+rayosx_corte      Distancia desde el ojo hasta la que se quita lo de delante
+                  (las paredes que atraviesa la mira). Medido: con 450-900 se
+                  ve lo mismo que en la PS1.  [500]
+rayosx_brillo     Brillo del escenario dentro de la caja, en %. La PS1 lo
+                  dibuja oscuro (35 se parece al original); más alto = se ve
+                  más claro.  [35]
+rayosx_oscuro     Oscurecido extra encima de todo (0 = nada). Con
+                  rayosx_vista=propia lo normal es 0: el brillo ya lo da
+                  rayosx_brillo.  [26]
+rayosx_ruido      Fuerza del ruido de televisión (los puntitos que se
+                  mueven); 0 = sin ruido, como el original.  [30]
+rayosx_numero     1 = muestra el número de munición dentro de la caja.  [0]
+
+   Solo con rayosx_vista=juego:
+rayosx_mezcla     0 = dentro de la caja solo la vista de rayos X; 1 = mezclada
+                  (transparente) con la vista normal de detrás.  [0]
+rayosx_luz        Brillo de esos polígonos, en %, de 80 a 400.  [100]
+rayosx_ajuste_x / rayosx_ajuste_y
+                  Mueven el contenido de la caja unos píxeles si no quedara
+                  centrado. Normalmente 0.  [0]
+
+-- Los personajes dentro de la caja --
+Se dibujan con el modelo 3D del PC (luz suave, textura nítida, animación
+fluida), en verde y por encima de todo, junto con las armas que llevan
+en las manos. rayosx_verde y rayosx_color se aplican también a esas armas.
+rayosx_verde      Fuerza del verde (brillo de los personajes), en %.
+                  De 50 a 400.  [170]
+rayosx_base       Capa de luz verde "de fondo" debajo de la textura, en %
+                  (0 a 100). Hace visible la ropa muy oscura, pero tapa
+                  detalle. 0 = solo la textura, con más detalle.  [35]
+rayosx_color      Cuánto color propio conserva cada personaje, de 0 a 100.
+                  0 = todo verde; más alto = se distinguen mejor piel, pelo y
+                  ropa.  [0]
+
+   Solo con rayosx_vista=juego:
+rayosx_modelos    1 = personajes con el modelo 3D (lo de arriba); 0 = con los
+                  polígonos verdes del propio juego.  [1]
+rayosx_resaltar   (con rayosx_modelos=0) cuánto se tiñen de verde, 0 a 100. [35]
+rayosx_silueta    (con rayosx_modelos=0) silueta verde de base (0 = sin
+                  silueta; más alto = más clara).  [60]
+
+Tu combinación actual:
+   rayosx_vista=propia, rayosx_base=0, rayosx_color=30, rayosx_oscuro=0
+
+
+8. OTROS
+--------
+nocturna_siluetas 1 = con la visión nocturna (Dragunov) los personajes se ven
+                  como siluetas lisas, como en el original: el personaje en
+                  verde lima; 0 = con su textura.  [1]
+nocturna_estela   1 = detrás de cada personaje, su estela de los cuadros
+                  anteriores (cian, azul verdoso, azul oscuro), como en el
+                  original; 0 = sin estela.  [1]
+nocturna_estela_pantalla
+                  1 = al mover la mira la estela se queda atrás en la
+                  pantalla, como en el original; 0 = solo cuando se mueve
+                  el personaje.  [1]
+nocturna_verde    1 = con la visión nocturna todo el escenario se ve en verde,
+                  como el original; 0 = con sus colores.  [1]
+misiones_mujer    Lista de misiones (separadas por comas) en las que el grito
+                  al morir es de mujer (cuando juegas con Lian o Teresa).
+                  [AFGHAN2,JUNGLE2,MCAVES,RIDGE,SNOWCAMP,TRIAGE1,TRIAGE2]
