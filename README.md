@@ -4,6 +4,10 @@ English | [Español](README_ES.md) | [Русский](README_RU.md)
 
 Version 0.9.1, Windows 10/11 64-bit.
 
+Youtube:
+
+[![Watch the video](https://img.youtube.com/vi/xkTZhP7I7t4/hqdefault.jpg)](https://www.youtube.com/embed/xkTZhP7I7t4)
+
 This project runs the original PlayStation Syphon Filter 3 (the `SCUS_946.40` executable from the USA disc) and draws it with a native PC renderer. The game logic is not touched: AI, missions, combat and animations are the game's own. What changes is the picture, the controls and a few additions on top.
 
 You need your own copy of the game (USA disc as `.bin` + `.cue`). No game files are included here.
